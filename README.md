@@ -51,7 +51,7 @@ at http://localhost:3000.
 
 Log in for the first time using the 'Log in' button (nope, not the 'Sign up' button).
 After you've authorized your app, you should be able to connect to the database
-using the credentials installed in /etc/blocktogether/config.json:
+using the credentials installed in `/etc/blocktogether/sequelize.json`:
 
     mysql -u blocktogether --password=PASSWORD -D blocktogether
 
@@ -59,10 +59,10 @@ Extract the `access_token` and `access_token_secret` for your user:
 
     select * from BtUsers \G
 
-Put these in /etc/blocktogether/config.json, using the same capitalization as
+Put these in `/etc/blocktogether/config.json`, using the same capitalization as
 the existing fields. Also change `userToFollow` to your Twitter handle.
 
-Now you can start the server & the support daemons. (The daemons perform the
+Now you can start the server and the support daemons. (The daemons perform the
 background work that the web frontend doesn't do.)
 
      vagrant ssh
